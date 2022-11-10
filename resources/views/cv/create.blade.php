@@ -27,10 +27,9 @@
         </div> 
     </nav> 
     <section>
-        <div class="container">
-            <br><br><br>
+        <div class="container">            
             <div class="row"> 
-                <div class="col">
+                <div class="col pt-5">
                     <form action="{{route('cv.store')}}" method="POST">
                         @CSRF
                         <input type="text" name="lastname" id="lastname" class="input" placeholder="Full name"   required=""><br>
