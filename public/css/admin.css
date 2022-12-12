@@ -1,0 +1,387 @@
+
+html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background-color: #a3a8f8;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: #222225;
+  }
+  
+  #dropdwn a{
+    color:black;
+  }
+  
+  /**    card   **/
+  .card {
+    width: 200px;
+    height: 250px;
+    background: #07182E;
+    border-radius: 5px;
+    text-align: center;
+    color: #f0f0f0;
+    font-family: inherit;
+    z-index: 1;
+  }
+
+  
+  .img {
+    display: flex;
+    margin: 60px auto 10px auto;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #f0f0f0;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    z-index: 99;
+    background-color: #152f50;
+  }
+  
+  .card p {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  
+  .heading {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  svg {
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  
+  .card:hover .img {
+    transform: scale(1.1);
+    border: 1px solid #f0f0f0;
+  }
+  
+  .card:hover h1,
+  .card:hover p {
+    opacity: 1;
+  }
+  
+  
+     /**   button   **/
+     .icon-btn {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #cdcdcd;
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      position: relative;
+      transition: width 0.2s ease-in-out;
+      font-weight: 500;
+      font-family: inherit;
+    }
+    
+    .add-btn:hover {
+      width: 120px;
+    }
+    
+    .add-btn::before,
+    .add-btn::after {
+      transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 10px;
+      top: calc(50% - 2px);
+      background: seagreen;
+    }
+    
+    .add-btn::after {
+      right: 14px;
+      overflow: hidden;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+    
+    .add-btn::before {
+      left: 14px;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+    
+    .icon-btn:focus {
+      outline: none;
+    }
+    
+    .btn-txt {
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    
+    .add-btn:hover::before,
+    .add-btn:hover::after {
+      width: 4px;
+      border-radius: 2px;
+    }
+    
+    .add-btn:hover .btn-txt {
+      opacity: 1;
+    }
+    
+    .add-icon::after,
+    .add-icon::before {
+      transition: all 0.2s ease-in-out;
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 2px;
+      top: calc(50% - 10px);
+      background: seagreen;
+      overflow: hidden;
+    }
+    
+    .add-icon::before {
+      left: 22px;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+    
+    .add-icon::after {
+      right: 22px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+    
+    .add-btn:hover .add-icon::before {
+      left: 15px;
+      height: 4px;
+      top: calc(50% - 2px);
+    }
+    
+    .add-btn:hover .add-icon::after {
+      right: 15px;
+      height: 4px;
+      top: calc(50% - 2px);
+    }
+  
+     
+  
+    .planet {
+      margin: auto;
+  width: 60%;
+  padding: 10px;
+      display: block;
+      width: 125px;
+      height: 125px;
+      position: relative;
+      transform-style: preserve-3d;
+      border-radius: 50%;
+      background: #fcc96b;
+      background: #fcc96b;
+      background: linear-gradient(
+        180deg,
+        #fcc96b 0%,
+        #fcc96b 15%,
+        #f7ae01 15%,
+        #f7ae01 19%,
+        #fcc96b 19%,
+        #fcc96b 22%,
+        #f7ae01 22%,
+        #f7ae01 28%,
+        #fcc96b 28%,
+        #fcc96b 31%,
+        #fcc96b 33%,
+        #fcc96b 36%,
+        #f7ae01 36%,
+        #f7ae01 48%,
+        #fcc96b 48%,
+        #fcc96b 55%,
+        #f7ae01 55%,
+        #f7ae01 66%,
+        #fcc96b 66%,
+        #fcc96b 70%,
+        #f7ae01 70%,
+        #f7ae01 73%,
+        #fcc96b 73%,
+        #fcc96b 82%,
+        #f7ae01 82%,
+        #c7ba9d 86%,
+        #fcc96b 86%
+      );
+      box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
+        inset 8px -4px 6px rgba(199, 128, 0, 0.5),
+        inset -8px 4px 8px rgba(255, 235, 199, 0.5), inset 20px -5px 12px #f7ae01,
+        0 0 100px #ffffff59;
+      transform: rotateZ(-15deg);
+    }
+    
+    .planet::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 16px solid #e1a519;
+      border-top-width: 0;
+      border-radius: 50%;
+      box-shadow: 0 -2px 0 #c18620;
+      animation: rings1 0.8s infinite linear;
+    }
+    
+    
+    @keyframes rings1 {
+      0% {
+        transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+      }
+    
+      100% {
+        transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+      }
+    }
+    
+    @keyframes rings2 {
+      0% {
+        transform: rotateX(65deg) rotateZ(0deg) scale(1.7);
+      }
+    
+      100% {
+        transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+      }
+    }
+  
+    .planet a{
+      text-decoration: none;
+      color:rgb(45, 46, 26);
+    }
+
+    /****** delete button *********/
+    button {
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background: red;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+        background: #e62222;
+       }
+       
+       button, button span {
+        transition: 200ms;
+       }
+       
+       button .text {
+        transform: translateX(15px);
+        color: white;
+        font-weight: bold;
+       }
+       
+       button .icon {
+        position: absolute;
+        border-left: 1px solid #c41b1b;
+        transform: translateX(70px);
+        height: 40px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       
+       button svg {
+        width: 15px;
+        fill: #eee;
+       }
+       
+       button:hover {
+        background: #ff3636;
+       }
+       
+       button:hover .text {
+        color: transparent;
+       }
+       
+       button:hover .icon {
+        width: 50px;
+        border-left: none;
+        transform: translateX(0);
+       }
+       
+       button:focus {
+        outline: none;
+       }
+       
+       button:active .icon svg {
+        transform: scale(0.8);
+       }
+
+    /******* edit button ********/
+       .btn {
+        --color: #00A97F;
+        --color2: rgb(10, 25, 30);
+        padding: 0.8em 1.75em;
+        background-color: transparent;
+        border-radius: 6px;
+        border: .3px solid var(--color);
+        transition: .5s;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 1;
+        font-weight: 300;
+        font-size: 17px;
+        font-family: 'Roboto', 'Segoe UI', sans-serif;
+        text-transform: uppercase;
+        color: var(--color);
+       }
+       
+       .btn::after, .btn::before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        transform: skew(90deg) translate(-50%, -50%);
+        position: absolute;
+        inset: 50%;
+        left: 25%;
+        z-index: -1;
+        transition: .5s ease-out;
+        background-color: var(--color);
+       }
+       
+       .btn::before {
+        top: -50%;
+        left: -25%;
+        transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+       }
+       
+       .btn:hover::before {
+        transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+       }
+       
+       .btn:hover::after {
+        transform: skew(45deg) translate(-50%, -50%);
+       }
+       
+       .btn:hover {
+        color: var(--color2);
+       }
+       
+       .btn:active {
+        filter: brightness(.7);
+        transform: scale(.98);
+       }
+
+       .test{
+        display:inline-flex;
+       }
+
+
+       img{
+        object-fit: cover;
+      }

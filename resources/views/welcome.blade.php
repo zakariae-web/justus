@@ -1,70 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/ens.png" type="image/x-icon">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ens-cards</title>
+    <link rel="shortcut icon" href="images/moon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="css/home.css">
-    <title>cle-info</title>
 </head>
-<body style="background-image:url('images/fond.jpg'); background-size: cover;">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand ps-4" href="#"><img src="images/logoens.png" style="width:250px; height: 60px;" class="ms-2"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item pe-3"><a class="nav-link active" href="{{('/')}}">Home</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="{{('cv/create')}}">add your profile</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="{{('cv')}}">see all profiles</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="https://www.justus.epizy.com" target="_blank">about us</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="#contact">contact</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active" href="{{('/')}}">Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/home')}}">teachers</a></li>
+                    <li class="nav-item dropdown pt-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">students</a>
+                        <ul class="dropdown-menu" id="dropdwn">
+                            <li><a class="dropdown-item" href="{{'cv'}}">info</a></li>
+                            <li><a class="dropdown-item" href="{{'s3'}}">physics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app" target="_blanc">About us</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
-        </div> 
-    </nav> 
-    <section id="home" >
-        <div class="row">
-            <div class="col">
-                <h1 class="pt-5 mt-5">Welcome to Cle-info</h1>
-                <h3>Add your cv from here : </h3>
-                <a href="{{('cv/create')}}" class="ms-5">
-                <button class="learn-more  ms-5">
-                    <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span></span>
-                    <span class="button-text">add mine</span>
-                </button>
-                </a>
-            </div>
-            <div class="col">
-                <img src="images/profile.png" alt="">
+        </div>
+    </nav>
+    <header class="masthead" style="background-image:url('assets/img/background.jpg'); background-size: cover; background-repeat: repeat;">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                <h1>clé-info</h1>
+                    <div class="col-md-6"> 
+                        <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carousel1">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/img1.jpeg" alt="Slide Image" style="width:500px; height:350px;"></div>
+                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/img2.jpeg" alt="Slide Image" style="width:500px; height:350px;"></div>
+                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/img3.jpeg" alt="Slide Image" style="width:500px; height:350px; object-position: 15% 100%;"></div>
+                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/img4.jpeg" alt="Slide Image" style="width:500px; height:350px;"></div>
+                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/img5.jpeg" alt="Slide Image" style="width:500px; height:350px;"></div>
+                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/img6.jpeg" alt="Slide Image" style="width:500px; height:350px;"></div>
+                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/img7.jpeg" alt="Slide Image" style="width:500px; height:350px;"></div>
+                            </div>
+                            <div><a class="carousel-control-prev" href="#carousel1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#carousel1" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#carousel1" data-bs-slide-to="2"></li>
+                                <li data-bs-target="#carousel1" data-bs-slide-to="3"></li>
+                                <li data-bs-target="#carousel1" data-bs-slide-to="4"></li>
+                                <li data-bs-target="#carousel1" data-bs-slide-to="5"></li>
+                                <li data-bs-target="#carousel1" data-bs-slide-to="6"></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-5">
+                        <h2>welcome to ens-cards website</h2>
+                        <h5>
+                            click <a href="{{'cv'}}"> here </a> to see all the students cards or add yours by clicking <a href="{{'cv/create'}}"> here. </a> <br> <br> sign-in as a teacher <a href="{{('/home')}}"> sign-in</a>
+                        </h5>
+                    </div>
+                </div>
             </div>
         </div>
-
-    </section>
-    <section id="contact">
+    </header>
+    <section class="text-center content-section" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 text-center mx-auto">
-                    <h2 class="section-heading pt-5">Let's Get In Touch!</h2>
-                    <hr class="my-4">
-                    <p class="mb-5">if you have any idea to ameliorate the website dont hesitate to contact me</p>
+                <div class="col-lg-8 mx-auto">
+                    <h2>Contact us</h2>
+                    <p>if you have any idea to ameliorate the website dont hesitate to contact us</p>
+                    <ul class="list-inline banner-social-buttons">  
+                        <a href="https://twitter.com/BelouadifZ" target="_blanc"><li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-twitter fa-fw"></i><span class="network-name">&nbsp;Twitter</span></button></li></a>
+                        <a href="https://github.com/zakariae-web" target="_blanc"><li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-github fa-fw"></i><span class="network-name">&nbsp;github</span></button></li></a>
+                    </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 text-center ms-auto"><i class="fa fa-phone fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true"></i>
-                    <p> +212 615486000</p>
-                </div>
-            <div class="col-lg-4 text-center me-auto"><i class="fa-solid fa-envelope fa-3x" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
-                <p><a href="mailto:zakariaeblouadif@gmail.com">zakariaebelouadif@gmail.com</a></p>
-            </div>
-            <a href="#"><i class="fa-sharp fa-solid fa-arrow-up fa-3x fa-bounce" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i></a>    
         </div>
     </section>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>  
+    <div class="map-clean"></div>
+    <footer>
+        <div class="container text-center">
+            <p>Copyright ©&nbsp;zak-web 2022</p>
+        </div>
+    </footer>
+    <script src="js/welcome.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
 </body>
+
 </html>

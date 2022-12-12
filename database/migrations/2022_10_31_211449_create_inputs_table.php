@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('twitter');
             $table->string('github');
             $table->string('linkcv');
-            $table->string('picture');
+        /*    $table->string('filiere');  */
+            $table->string('image');
             $table->timestamps();
         });
     }

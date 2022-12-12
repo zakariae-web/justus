@@ -1,59 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/ens.png" type="image/x-icon">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ens-cards</title>
+    <link rel="shortcut icon" href="/images/moon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/form/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="/form/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/form/assets/css/Features-Cards-icons.css">
+    <link rel="stylesheet" href="/form/assets/css/Pretty-Registration-Form-.css">
     <link rel="stylesheet" href="/css/create.css">
-    <title>cle-info</title>
 </head>
-<body style="background-image:url('/images/fond.jpg'); background-size: cover; background-repeat: no-repeat;">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand ps-4" href="#"><img src="/images/logoens.png" style="width:250px; height: 60px;" class="ms-2"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+<nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+<div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="/assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item pe-3"><a class="nav-link active" href="{{('/')}}">Home</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="{{('')}}">add your profile</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="{{('../cv')}}">see all profiles</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="#" target="_blank">about us</a></li>
-                    <li class="nav-item pe-3"><a class="nav-link active" href="#contact">contact</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="{{('/')}}">Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="{{('/home')}}">teachers</a></li>
+                    <li class="nav-item dropdown pt-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filiers</a>
+                        <ul class="dropdown-menu" id="dropdwn">
+                            <li><a class="dropdown-item" href="{{'../cv'}}">info</a></li>
+                            <li><a class="dropdown-item" href="{{'../s3'}}">physics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
                 </ul>
             </div>
-        </div> 
-    </nav> 
-    <section>
-        <div class="container">            
-            <div class="row"> 
-                <div class="col pt-5">
-                    <form action="{{route('cv.store')}}" method="POST">
-                        @CSRF
-                        <input type="text" name="lastname" id="lastname" class="input" placeholder="Full name"   required=""><br>
-                        <input type="text" name="twitter" id="twitter" class="input" placeholder="your twitter link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"><br>
-                        <input type="text" name="github" id="github" class="input" placeholder="your github link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"><br>
-                        <input type="text" name="linkcv" id="linkcv" class="input" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"><br>
-                        <button>
-                            <div class="svg-wrapper-1">
-                                <div class="svg-wrapper">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <span>Send</span>
-                        </button>
-                    </form>
-                </div>  
-                <div class="col">
-                    <img src="/images/welcome.png" alt=""> 
-                </div>
-            </div> 
         </div>
-    </section>
+    </nav>
+    <header class="masthead" style="background-image:url('/assets/img/background.jpg');">
+        <div class="intro-body">
+            <div class="row register-form">
+                <div class="col-md-8 offset-md-2" style="margin-top: 50px;">
+                    <form class="custom-form" action="{{route('cv.store')}}" method="POST" enctype="multipart/form-data">
+                    @CSRF
+                        <h1>Register Form</h1>
+                        <div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">full name </label></div>
+                            <div class="col-sm-6 input-column"><input type="text" name="lastname" id="lastname" class="input" placeholder="Full name"   required=""></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">twitter </label></div>
+                            <div class="col-sm-6 input-column"><input type="text" name="twitter" id="twitter" class="input" placeholder="your twitter link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="pawssword-input-field">github </label></div>
+                            <div class="col-sm-6 input-column"><input type="text" name="github" id="github" class="input" placeholder="your github link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">portfolio </label></div>
+                            <div class="col-sm-6 input-column"><input type="text" name="linkcv" id="linkcv" class="input" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
+                        </div>
+                        <!--<div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">select class </label></div>
+                            <div class="col-sm-6 input-column">
+                                <select class="form-select" aria-label="Default select example" name="filiere">
+                                    <option selected>Open this select menu</option>
+                                    <option value="s5'">info-s5</option>
+                                    <option value="s3'">info-s3</option>
+                                </select>
+                            </div>
+                        </div>-->
+                        <div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">profile picture </label></div>
+                            <div class="col-sm-6 input-column"><input type="file" name="image" id="image" class="input"></div>
+                        </div>
+                        <button class="btn btn-light submit-button" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="map-clean"></div>
+    <footer>
+        <div class="container text-center">
+            <p>Copyright ©&nbsp;zak-web 2022</p>
+        </div>
+    </footer>
+    <script src="/form/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/form/assets/js/grayscale.js"></script>
 </body>
 </html>

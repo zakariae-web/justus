@@ -19,6 +19,8 @@ class Inputscontroller extends Controller
            ]);
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -37,26 +39,23 @@ class Inputscontroller extends Controller
      */
     public function store(Request $request)
     {
+        $file_extension = $request -> image -> getClientOriginalExtension();
+        $file_name = time().'.'.$file_extension;
+        $path = 'images/cv';
+        $request -> image -> move($path,$file_name);
+
+
         $cv = new input();
         $cv->lastname =$request->input('lastname');
         $cv->twitter =$request->input('twitter');
         $cv->github =$request->input('github');
         $cv->linkcv =$request->input('linkcv');
-        $cv->linkcv =$request->input('picture');
+        /*$cv->filiere =$request->input('filiere'); */
+        $cv['image']= $file_name;
 
-        /*
-        $input = $cv->all();
-
-        if($picture = $cv->file('image')){
-            $destinationPath = 'images/';
-            $profileImage = date('YmdHis') . "." . $picture->getClientOriginalExtension();
-            $picture->move($destionationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }
-        cv::create($input);
-        */
         $cv->save();
        return redirect()->route('cv.index');
+
     }
 
     /**
@@ -78,7 +77,10 @@ class Inputscontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $cv = input::findorfail($id);
+        return view('cv.edit', [
+            'cv' => $cv
+        ]);
     }
 
     /**
@@ -90,7 +92,23 @@ class Inputscontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cv = input::findorfail($id);
+
+        $file_extension = $request -> image -> getClientOriginalExtension();
+        $file_name = time().'.'.$file_extension;
+        $path = 'images/cv';
+        $request -> image -> move($path,$file_name);
+
+
+        $cv->lastname =$request->input('lastname');
+        $cv->twitter =$request->input('twitter');
+        $cv->github =$request->input('github');
+        $cv->linkcv =$request->input('linkcv');
+        /*$cv->filiere =$request->input('filiere'); */
+        $cv['image']= $file_name;
+
+        $cv->save();
+       return redirect()->route('cv.admin');
     }
 
     /**
@@ -101,6 +119,8 @@ class Inputscontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cv = input::findorfail($id);
+        $cv->delete();
+        return redirect()->route('cv.admin');
     }
 }

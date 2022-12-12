@@ -44,6 +44,20 @@ return [
             'throw' => false,
         ],
 
+        'cv' => [
+            'driver' => 'local',
+            'root' => base_path() . 'public/images/cv/',
+            'url' => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
+
+        'cv2' => [
+            'driver' => 'local',
+            'root' => base_path() . 'public/images/cv2/',
+            'url' => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
