@@ -27,6 +27,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function chose()
+    {
+        return view('/chose');
+    }
     public function admin()
     {
         return view('cv.admin', [
@@ -38,9 +42,5 @@ class HomeController extends Controller
         return view('s3.admin2', [
             's3' => inp::all()
            ]);
-    }
-    public function chose()
-    {
-        return view('chose');
     }
 }

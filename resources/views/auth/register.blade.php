@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+        <div class="login-box mt-5" style="background-image:url('assets/img/moon.jpg'); background-size:cover;">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">

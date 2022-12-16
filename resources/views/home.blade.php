@@ -46,16 +46,18 @@
     <header class="masthead" style="background-image:url('assets/img/background.jpg');">
     <div class="container py-4 py-xl-5">
             <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                <div class="col-12 col-lg-3 offset-0" style="margin-top: 120px;">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <img src="/assets/img/courses.jpg" alt="" style="width:200px;">
-                            <h4 class="card-title"><span style="color: rgb(0, 0, 0);">courses</span></h4>
-                            <p class="card-text"><span style="color: rgb(0, 0, 0);">publish courses for students</span></p>
-                            <a href="{{'course/create'}}"><button class="btn btn-primary" type="button">add</button></a>
+                @if(Auth::user()->id == 8)
+                    <div class="col-12 col-lg-3 offset-0" style="margin-top: 120px;">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <img src="/assets/img/courses.jpg" alt="" style="width:200px;">
+                                <h4 class="card-title"><span style="color: rgb(0, 0, 0);">courses</span></h4>
+                                <p class="card-text"><span style="color: rgb(0, 0, 0);">publish courses for students</span></p>
+                                <a href="{{'course/create'}}"><button class="btn btn-primary" type="button">add</button></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
                 <div class="col-12 col-lg-3 offset-0" style="margin-top: 122px;">
                     <div class="card">
                         <div class="card-body p-4">

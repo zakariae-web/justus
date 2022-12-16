@@ -22,15 +22,17 @@
 <div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item nav-link"><a class="nav-link" href="{{('/')}}">Home</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="{{('/home')}}">teachers</a></li>
-                    <li class="nav-item dropdown pt-2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filiers</a>
-                        <ul class="dropdown-menu" id="dropdwn">
-                            <li><a class="dropdown-item" href="{{'cv'}}">info</a></li>
-                            <li><a class="dropdown-item" href="{{'s3'}}">physics</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/chose')}}">classes</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
+                    <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </ul>
             </div>
         </div>
@@ -41,6 +43,7 @@
                 <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 pt-5">
                     @foreach ($s3 as $s3)
                         <div class="col">
+                        <a href="{{route('s3.show', ['s3' => $s3->id])}}" style="text-decoration:none">
                             <div class="card" style="width: 20rem; height: 20rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">
                                 <div  style="width: 100%;height: 200px;background: url('images/cv2/{{$s3['image']}}') center / contain;border-top-left-radius: 20px;border-top-right-radius: 20px; background-size:cover; background-repeat:no-repeat;"></div>
                                 <div>
@@ -60,6 +63,8 @@
                                     </p>
                                 </div>                 
                             </div>
+                        </a>
+                            @if(Auth::user()->id == 8)
                             <div class="test">
                             <a href="{{route('s3.edit', ['s3' => $s3->id])}}"><button class="btn me-5 pt-2">edit</button></a>
                             <form method="POST" action="{{ route('s3.destroy', $s3->id)}}">
@@ -69,6 +74,7 @@
                                 </div>
                             </form> 
                         </div>
+                        @endif
                     @endforeach
                 </div>
             </div>

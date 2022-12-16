@@ -31,6 +31,15 @@
                             <li><a class="dropdown-item" href="{{'s3'}}">physics</a></li>
                         </ul>
                     </li>
+                    <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                     <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
                 </ul>
             </div>

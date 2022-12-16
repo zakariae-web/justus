@@ -51,7 +51,7 @@ class inpt extends Controller
 
         
         $s3->save();
-       return redirect()->route('s3.index');
+       return redirect()->route('s3.admin2');
     }
 
     /**
@@ -62,7 +62,8 @@ class inpt extends Controller
      */
     public function show($id)
     {
-        //
+        $s3 = inp ::findorfail($id);
+        return view('s3.show',compact('s3'));
     }
 
     /**

@@ -10,5 +10,9 @@ class staticcontroller extends Controller
     public function index() {
         return view('welcome');
     }
+    public function chose() {
+        return view('chose');
+    }
+    
     
 }

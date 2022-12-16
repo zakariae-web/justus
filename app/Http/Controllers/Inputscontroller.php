@@ -54,7 +54,7 @@ class Inputscontroller extends Controller
         $cv['image']= $file_name;
 
         $cv->save();
-       return redirect()->route('cv.index');
+       return redirect()->route('cv.admin');
 
     }
 
@@ -66,7 +66,8 @@ class Inputscontroller extends Controller
      */
     public function show($id)
     {
-        //
+        $cv = input ::findorfail($id);
+        return view('cv.show',compact('cv'));
     }
 
     /**

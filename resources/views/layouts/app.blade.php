@@ -20,24 +20,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
-                        <li class="nav-item nav-link"><a class="nav-link " href="{{('/home')}}">teachers</a></li>
-                        <li class="nav-item dropdown pt-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">students</a>
-                            <ul class="dropdown-menu" id="dropdwn">
-                                <li><a class="dropdown-item" href="{{'cv'}}">info</a></li>
-                                <li><a class="dropdown-item" href="{{'s3'}}">physics</a></li>
-                            </ul>
-                        </li>
                         <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
-                        <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                        </li>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
                     </ul>
                 </div>
             </div>

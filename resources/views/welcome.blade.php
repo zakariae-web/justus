@@ -17,17 +17,18 @@
         <div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
+                    @if(Auth::check())
                     <li class="nav-item nav-link"><a class="nav-link active" href="{{('/')}}">Home</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/home')}}">teachers</a></li>
-                    <li class="nav-item dropdown pt-2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">students</a>
-                        <ul class="dropdown-menu" id="dropdwn">
-                            <li><a class="dropdown-item" href="{{'cv'}}">info</a></li>
-                            <li><a class="dropdown-item" href="{{'s3'}}">physics</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/chose')}}">classes</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app" target="_blanc">About us</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="#contact">Contact</a></li>
+                    @else
+                    <li class="nav-item nav-link"><a class="nav-link active" href="{{('/')}}">Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/chose')}}">classes</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="{{('chose')}}">login</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app" target="_blanc">About us</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#contact">Contact</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -62,9 +63,6 @@
                     </div>
                     <div class="col-md-6 mt-5">
                         <h2>welcome to ens-cards website</h2>
-                        <h5>
-                            click <a href="{{'cv'}}"> here </a> to see all the students cards or add yours by clicking <a href="{{'cv/create'}}"> here. </a> <br> <br> sign-in as a teacher <a href="{{('/home')}}"> sign-in</a>
-                        </h5>
                     </div>
                 </div>
             </div>
