@@ -17,7 +17,8 @@
         <div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nav-link"><a class="nav-link active" href="{{('/')}}">Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link active " href="{{('/chose')}}">classes</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app" target="_blanc">About us</a></li>
                     <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
