@@ -58,10 +58,6 @@
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">portfolio </label></div>
                             <div class="col-sm-6 input-column"><input type="text" name="linkcv" id="linkcv" class="input" value="{{old('linkcv',$s3->linkcv)}}" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
                         </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">profile picture </label></div>
-                            <div class="col-sm-6 input-column"><input type="file" name="image" id="image" class="input" value="{{old('image',$s3->image)}}" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
-                        </div>
                         <button class="btn btn-light submit-button" type="submit">Send</button>
                     </form>
                 </div>

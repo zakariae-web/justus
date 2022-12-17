@@ -55,12 +55,12 @@
                             <div class="col-sm-6 input-column"><input type="text" name="github" id="github" class="input" value="{{old('github',$cv->github)}}" placeholder="your github link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">portfolio </label></div>
-                            <div class="col-sm-6 input-column"><input type="text" name="linkcv" id="linkcv" class="input" value="{{old('linkcv',$cv->linkcv)}}" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">tell us about you</label></div>
+                            <div class="col-sm-6 input-column"><input type="text" name="about" id="about" class="input" placeholder="... "   required=""></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">profile picture </label></div>
-                            <div class="col-sm-6 input-column"><input type="file" name="image" id="image" class="input" value="{{old('image',$cv->image)}}" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">portfolio </label></div>
+                            <div class="col-sm-6 input-column"><input type="text" name="linkcv" id="linkcv" class="input" value="{{old('linkcv',$cv->linkcv)}}" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
                         </div>
                         <button class="btn btn-light submit-button" type="submit">Send</button>
                     </form>

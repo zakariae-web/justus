@@ -91,18 +91,12 @@ class inpt extends Controller
     {
         $s3 = inp::findorfail($id);
 
-        $file_extension = $request -> image -> getClientOriginalExtension();
-        $file_name = time().'.'.$file_extension;
-        $path = 'images/cv2';
-        $request -> image -> move($path,$file_name);
-
 
         $s3->lastname =$request->input('lastname');
         $s3->twitter =$request->input('twitter');
         $s3->github =$request->input('github');
         $s3->linkcv =$request->input('linkcv');
-        /*$cv->filiere =$request->input('filiere'); */
-        $s3['image']= $file_name;
+
 
         $s3->save();
        return redirect()->route('s3.admin2');

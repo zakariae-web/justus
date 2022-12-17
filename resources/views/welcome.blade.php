@@ -34,6 +34,7 @@
                     @else
                     <li class="nav-item nav-link"><a class="nav-link active" href="{{('/')}}">Home</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="{{('chose')}}">login</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="{{('register')}}">register</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app" target="_blanc">About us</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="#contact">Contact</a></li>
                     @endif

@@ -21,15 +21,17 @@
 <div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="/assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item nav-link"><a class="nav-link" href="{{('/')}}">Home</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="{{('/home')}}">teachers</a></li>
-                    <li class="nav-item dropdown pt-2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filiers</a>
-                        <ul class="dropdown-menu" id="dropdwn">
-                            <li><a class="dropdown-item" href="{{'../cv'}}">info</a></li>
-                            <li><a class="dropdown-item" href="{{'../s3'}}">physics</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/chose')}}">classes</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
+                    <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </ul>
             </div>
         </div>
@@ -57,16 +59,10 @@
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">portfolio </label></div>
                             <div class="col-sm-6 input-column"><input type="text" name="linkcv" id="linkcv" class="input" placeholder="your portfolio link : "   required=""  pattern="https?://www.+" title="Include https://www.example.com"></div>
                         </div>
-                        <!--<div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">select class </label></div>
-                            <div class="col-sm-6 input-column">
-                                <select class="form-select" aria-label="Default select example" name="filiere">
-                                    <option selected>Open this select menu</option>
-                                    <option value="s5'">info-s5</option>
-                                    <option value="s3'">info-s3</option>
-                                </select>
-                            </div>
-                        </div>-->
+                        <div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">tell us about you</label></div>
+                            <div class="col-sm-6 input-column"><input type="text" name="about" id="about" class="input" placeholder="... "   required=""></div>
+                        </div>
                         <div class="row form-group">
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">profile picture </label></div>
                             <div class="col-sm-6 input-column"><input type="file" name="image" id="image" class="input"></div>

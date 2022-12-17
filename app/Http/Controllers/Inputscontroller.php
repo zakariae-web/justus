@@ -50,7 +50,7 @@ class Inputscontroller extends Controller
         $cv->twitter =$request->input('twitter');
         $cv->github =$request->input('github');
         $cv->linkcv =$request->input('linkcv');
-        /*$cv->filiere =$request->input('filiere'); */
+        $cv->about =$request->input('about');
         $cv['image']= $file_name;
 
         $cv->save();
@@ -94,19 +94,12 @@ class Inputscontroller extends Controller
     public function update(Request $request, $id)
     {
         $cv = input::findorfail($id);
-
-        $file_extension = $request -> image -> getClientOriginalExtension();
-        $file_name = time().'.'.$file_extension;
-        $path = 'images/cv';
-        $request -> image -> move($path,$file_name);
-
-
+        
         $cv->lastname =$request->input('lastname');
         $cv->twitter =$request->input('twitter');
         $cv->github =$request->input('github');
         $cv->linkcv =$request->input('linkcv');
-        /*$cv->filiere =$request->input('filiere'); */
-        $cv['image']= $file_name;
+        $cv->about =$request->input('about');
 
         $cv->save();
        return redirect()->route('cv.admin');

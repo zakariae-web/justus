@@ -20,6 +20,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
+                        <li class="nav-item nav-link"><a class="nav-link" href="{{('login')}}">login</a></li>
+                        <li class="nav-item nav-link"><a class="nav-link" href="{{('register')}}">register</a></li>
                         <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
                     </ul>
                 </div>
