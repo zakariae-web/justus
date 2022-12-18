@@ -64,7 +64,7 @@
                                 </div>                 
                             </div>
                         </a>
-                            @if(Auth::user()->id == 8)
+                            @if(Auth::user()->id == 1)
                             <div class="test">
                             <a href="{{route('s3.edit', ['s3' => $s3->id])}}"><button class="btn me-5 pt-2">edit</button></a>
                             <form method="POST" action="{{ route('s3.destroy', $s3->id)}}">

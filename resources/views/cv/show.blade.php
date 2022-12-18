@@ -26,36 +26,29 @@
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-<nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
-<div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="/assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link " href="{{('../chose')}}">classes</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
-                    <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                    </li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </ul>
-            </div>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="/assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
+                <li class="nav-item nav-link"><a class="nav-link " href="{{('../chose')}}">classes</a></li>
+                <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
+                <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </ul>
         </div>
-    </nav>
-    
-            
-            
-            
-            
+    </nav>  
     <header class="masthead" style="background-image:url('/assets/img/background.jpg');">
-    <div class="profile-card">
-    <div class="profile-back"></div><img class="rounded-circle profile-pic" src="/images/cv/{{$cv['image']}}">
-    <h3 class="profile-name">{{$cv['lastname']}}</h3>
-    <p class="profile-bio">{{$cv['about']}}</p>
-    <ul class="social-list">
+        <div class="profile-card">
+            <div class="profile-back"></div><img class="rounded-circle profile-pic" src="/images/cv/{{$cv['image']}}">
+            <h3 class="profile-name">{{$cv['lastname']}}</h3>
+            <p class="profile-bio">{{$cv['about']}}</p>
             <a href="{{$cv['twitter']}}" target="_blanc">
                 <svg height="50" width="50" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024" class="icon">
                     <path d="M962.267429 233.179429q-38.253714 56.027429-92.598857 95.451429 0.585143 7.972571 0.585143 23.990857 0 74.313143-21.723429 148.260571t-65.974857 141.970286-105.398857 120.32-147.456 83.456-184.539429 31.158857q-154.843429 0-283.428571-82.870857 19.968 2.267429 44.544 2.267429 128.585143 0 229.156571-78.848-59.977143-1.170286-107.446857-36.864t-65.170286-91.136q18.870857 2.852571 34.889143 2.852571 24.576 0 48.566857-6.290286-64-13.165714-105.984-63.707429t-41.984-117.394286l0-2.267429q38.838857 21.723429 83.456 23.405714-37.741714-25.161143-59.977143-65.682286t-22.308571-87.990857q0-50.322286 25.161143-93.110857 69.12 85.138286 168.301714 136.265143t212.260571 56.832q-4.534857-21.723429-4.534857-42.276571 0-76.580571 53.979429-130.56t130.56-53.979429q80.018286 0 134.875429 58.294857 62.317714-11.995429 117.174857-44.544-21.138286 65.682286-81.115429 101.741714 53.174857-5.705143 106.276571-28.598857z" fill="#f0f0f0"></path>
@@ -67,8 +60,6 @@
                 </svg>
             </a>
             <a href="{{$cv['linkcv']}}" target="_blanc"><i class="fa-regular fa-address-card fa-2xl" style="color:white;"></i></a>
-        </p>
-    </ul>   
         </div>
     </header>
     <div class="map-clean"></div>

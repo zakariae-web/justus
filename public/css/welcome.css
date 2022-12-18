@@ -398,6 +398,30 @@ button:hover .button-text {
           animation-delay: 0.75s;
 }/*# sourceMappingURL=welcome.css.map */
 
+h1{
+  font-family:'Times New Roman', Times, serif;
+}
+
+p{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.card{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: rgba(47, 47, 49, 0.63);
+}
 img{
-  object-fit: cover;
+  width:50%;
+  height: 200px;
+}
+
+.card a{
+  text-decoration: none;
+  color: #d6c315;
+  font-family: 'Courier New', Courier, monospace;
+}
+h3{
+  font-size: 1.5rem;
+  font-weight: 400;
 }

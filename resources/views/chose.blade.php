@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/welcome.css">
 </head>
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
     <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
@@ -37,26 +37,24 @@
         <div class="intro-body">
         
             <div class="container">
+                <h1>clé-informatique</h1>
+                <p class="intro-text">chose the class that you want to see</p>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1>clé-informatique</h1>
-                        <p class="intro-text">chose the class you want to edit</p>
-                        <a href="{{'admin'}}">
-                            <button class="learn-more">
-                                <span class="circle" aria-hidden="true">
-                                    <span class="icon arrow"></span>
-                                </span>
-                                <span class="button-text">informatique</span>
-                            </button><br>
-                        </a>
-                        <a href="{{'admin2'}}">
-                            <button class="learn-more mt-3">
-                                <span class="circle" aria-hidden="true">
-                                    <span class="icon arrow"></span>
-                                </span>
-                                <span class="button-text">physics</span>
-                            </button>
-                        </a>
+                    <div class="col">
+                        <div class="card">
+                            <img  src="images/info.svg" alt="">   
+                            <a href="{{'admin'}}">
+                                <h3 class="pt-2">informatique</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                        <img  src="images/physic.svg" alt=""> 
+                            <a href="{{'admin2'}}">
+                                <h3 class="pt-2">physics</h3>
+                            </a>
+                        </div>    
                     </div>
                 </div>
             </div>

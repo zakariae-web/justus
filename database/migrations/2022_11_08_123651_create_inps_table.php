@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('twitter');
             $table->string('github');
             $table->string('linkcv');
+            $table->string('about');
             $table->string('image');
             $table->timestamps();
         });

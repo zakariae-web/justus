@@ -23,7 +23,6 @@ Route::resource('s3', inpt::class);
 Route::resource('course', courses::class);
 Auth::routes();
 Route::get('/chose', [App\Http\Controllers\HomeController::class, 'chose'])->name('chose');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('cv.admin');
 Route::get('/admin2', [App\Http\Controllers\HomeController::class, 'admin2'])->name('s3.admin2');
 

@@ -47,6 +47,7 @@ class inpt extends Controller
         $s3->twitter =$request->input('twitter');
         $s3->github =$request->input('github');
         $s3->linkcv =$request->input('linkcv');
+        $s3->about =$request->input('about');
         $s3['image']= $file_name;
 
         
@@ -96,6 +97,7 @@ class inpt extends Controller
         $s3->twitter =$request->input('twitter');
         $s3->github =$request->input('github');
         $s3->linkcv =$request->input('linkcv');
+        $cv->about =$request->input('about');
 
 
         $s3->save();
