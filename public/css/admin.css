@@ -11,9 +11,7 @@ html::-webkit-scrollbar {
     background-color: #222225;
   }
   
-  #dropdwn a{
-    color:black;
-  }
+
   
   /**    card   **/
   .card {

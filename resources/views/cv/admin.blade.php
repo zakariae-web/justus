@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/assets/css/Features-Cards-icons.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/admin.css">
+    
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
@@ -24,15 +25,19 @@
                     <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
                     <li class="nav-item nav-link"><a class="nav-link " href="{{('/chose')}}">classes</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
-                    <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
+                    <li class="nav-item nav-link">
+                        <a class="nav-link"  href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
+                    <li class="nav-item nav-link">
+                        <a class="nav-link " href="#" role="button">{{ Auth::user()->name }}</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -79,11 +84,19 @@
                     @endforeach
                 </div>
             </div>
-            <div class="planet mb-5">
-            <a href="{{('cv/create')}}">
-                <h5>add your profile</h5>  
-            </a>
-            </div>
+            @if(Auth::user()->id == 1)
+                <div class="planet mb-5">
+                    <a href="{{('cv/create')}}">
+                        <h5>add <br> new profile</h5>  
+                    </a>
+                </div>
+            @else
+                <div class="planet mb-5">
+                    <a href="{{('cv/create')}}">
+                        <h5>add your profile</h5>  
+                    </a>
+                </div>
+            @endif
         </div>
     </header>
     <div class="map-clean"></div>

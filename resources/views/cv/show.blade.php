@@ -32,6 +32,9 @@
                 <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
                 <li class="nav-item nav-link"><a class="nav-link " href="{{('../chose')}}">classes</a></li>
                 <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app">About us</a></li>
+                <li class="nav-item nav-link">
+                <a class="nav-link " href="{{route('cv.edit', ['cv' => $cv->id])}}">edit my profile</a>
+                </li>
                 <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
