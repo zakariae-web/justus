@@ -20,7 +20,7 @@
                     @if(Auth::check())
                     <li class="nav-item nav-link"><a class="nav-link active" href="{{('/')}}">Home</a></li>
                     <li class="nav-item nav-link"><a class="nav-link " href="{{('/chose')}}">classes</a></li>
-                    <li class="nav-item nav-link"><a class="nav-link" href="https://www.test-fckd.vercel.app" target="_blanc">About us</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="www.test-fckd.vercel.app" target="_blanc">About us</a></li>
                     <li class="nav-item nav-link"><a class="nav-link" href="#contact">Contact</a></li>
                     <li><a class="dropdown-item mt-3" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -46,7 +46,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                <h1>clé-info</h1>
+                <h2>welcome to ens-cards website</h2>
                     <div class="col-md-6"> 
                         <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carousel1">
                             <div class="carousel-inner">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 mt-5">
-                        <h2>welcome to ens-cards website</h2>
+                        
                     </div>
                 </div>
             </div>
