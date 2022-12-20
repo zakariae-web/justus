@@ -52,7 +52,7 @@ class Inputscontroller extends Controller
         $cv->linkcv =$request->input('linkcv');
         $cv->about =$request->input('about');
         $cv['image']= $file_name;
-
+        $cv->userid = auth()->user()->id;
         $cv->save();
        return redirect()->route('cv.admin');
 
