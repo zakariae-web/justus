@@ -25,4 +25,6 @@ Auth::routes();
 Route::get('/chose', [App\Http\Controllers\HomeController::class, 'chose'])->name('chose');
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('cv.admin');
 Route::get('/admin2', [App\Http\Controllers\HomeController::class, 'admin2'])->name('s3.admin2');
+Route::get('/cv/create', [App\Http\Controllers\HomeController::class, 'create'])->name('cv.create');
+Route::get('/s3/create', [App\Http\Controllers\HomeController::class, 'create2'])->name('s3.create');
 

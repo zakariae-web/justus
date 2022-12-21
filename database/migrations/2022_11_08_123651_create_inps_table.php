@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('about');
             $table->string('image');
             $table->timestamps();
+            $table->unsignedBigInteger('userid');
+            $table->foreign('userid')->references('id')->on('users');
         });
     }
 

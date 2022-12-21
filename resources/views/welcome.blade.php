@@ -71,13 +71,29 @@
                         </div>
                     </div>
                     <div class="col-md-6 mt-5">
-                        
+                        <h2>services</h2>
+                        <a href="{{('chose')}}">
+                            <button class="learn-more">
+                                    <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text">see all the students</span>
+                            </button><br>
+                        </a>
+                        <a href="{{('cv/create')}}">
+                            <button class="learn-more pt-5">
+                                    <span class="circle " aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                    </span>
+                                    <span class="button-text pt-5 mt-2">create your profile</span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="text-center content-section" id="contact">
+    <section class="text-center content-section" id="contact" style="background-image:url('images/ens2.jpg'); background-size: cover; background-repeat: repeat;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">

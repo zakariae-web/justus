@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class inp extends Model
 {
     use HasFactory;
+
+    
+    public function User(){
+        return $this->belongsTo(User::class);
+    }
 }

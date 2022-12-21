@@ -48,6 +48,7 @@ class inpt extends Controller
         $s3->github =$request->input('github');
         $s3->linkcv =$request->input('linkcv');
         $s3->about =$request->input('about');
+        $s3->userid = auth()->user()->id;
         $s3['image']= $file_name;
 
         

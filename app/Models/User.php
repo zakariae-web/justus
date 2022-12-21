@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function inputs(){
         return $this->hasMany(Input::class);
     }
+
+    public function inp(){
+        return $this->hasMany(inp::class);
+    }
 }

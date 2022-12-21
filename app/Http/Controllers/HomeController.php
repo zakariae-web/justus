@@ -27,6 +27,18 @@ class HomeController extends Controller
     {
         return view('/chose');
     }
+
+    public function create()
+    {
+        return view('cv.create');
+    }
+
+    
+    public function create2()
+    {
+        return view('s3.create');
+    }
+    
     public function admin()
     {
         return view('cv.admin', [

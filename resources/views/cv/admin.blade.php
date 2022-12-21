@@ -19,8 +19,9 @@
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
-<nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
-<div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>            <div class="collapse navbar-collapse" id="navbarResponsive">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="{{('/')}}"><img src="assets/img/zakweb.png" style="width:140px; height: 80px;" alt=""></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item nav-link"><a class="nav-link " href="{{('/')}}">Home</a></li>
                     <li class="nav-item nav-link"><a class="nav-link " href="{{('/chose')}}">classes</a></li>
@@ -71,40 +72,36 @@
                             </a>
                             @if(Auth::user()->id == 1)
                                 <div class="test">
-                                <a href="{{route('cv.edit', ['cv' => $cv->id])}}"><button class="btn me-5 pt-2">edit</button></a>
-                                <form method="POST" action="{{ route('cv.destroy', $cv->id)}}">
-                                    @csrf
-                                    @method('DELETE')
-
+                                    <a href="{{route('cv.edit', ['cv' => $cv->id])}}"><button class="btn me-5 pt-2">edit</button></a>
+                                    <form method="POST" action="{{ route('cv.destroy', $cv->id)}}">
+                                        @csrf
+                                        @method('DELETE')
                                         <a><button class="noselect" value="delete"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             @elseif(Auth::user()->id == $cv['userid'])
-                            <div class="test">
-                                <a href="{{route('cv.edit', ['cv' => $cv->id])}}"><button class="btn me-5 pt-2">edit</button></a>
-                                <form method="POST" action="{{ route('cv.destroy', $cv->id)}}">
-                                    @csrf
-                                    @method('DELETE')
-
+                                <div class="test">
+                                    <a href="{{route('cv.edit', ['cv' => $cv->id])}}"><button class="btn me-5 pt-2">edit</button></a>
+                                    <form method="POST" action="{{ route('cv.destroy', $cv->id)}}">
+                                        @csrf
+                                        @method('DELETE')
                                         <a><button class="noselect" value="delete"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             @endif
                         </div>
                     @endforeach
                 </div>
             </div>
-
-                @if (Auth::user()->id == $cv['userid'])
-                <div></div>
-                @else
-                <div class="planet mb-5">
-                    <a href="{{('cv/create')}}">
-                        <h5>add your profile</h5>  
-                    </a>
-                </div>
-                @endif
-
+            @if (Auth::user()->id == $cv['userid'])
+            <div></div>
+            @else
+            <div class="planet mb-5">
+                <a href="{{('cv/create')}}">
+                    <h5>add your profile</h5>  
+                </a>
+            </div>
+            @endif
         </div>
     </header>
     <div class="map-clean"></div>
