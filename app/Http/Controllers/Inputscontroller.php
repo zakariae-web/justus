@@ -7,6 +7,10 @@ use App\Models\Input;
 
 class Inputscontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,7 @@ class Inputscontroller extends Controller
      */
     public function index()
     {
-        return view('cv.index', [
+        return view('cv.admin', [
             'cv' => input::all()
            ]);
     }

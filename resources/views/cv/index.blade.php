@@ -55,7 +55,6 @@
                                 <div  style="width: 100%;height: 200px;background: url('images/cv/{{$cv['image']}}') center / contain;border-top-left-radius: 20px;border-top-right-radius: 20px; background-size:cover; background-repeat:no-repeat;"></div>
                                 <div>
                                     <h4  style="font-family: 'Source Sans Pro', sans-serif;font-weight: 700;color: rgb(255,160,0);" class="mb-0 mt-3">{{$cv['lastname']}}</h4>
-                                    <h4  style="font-family: 'Source Sans Pro', sans-serif;font-weight: 700;color: rgb(255,160,0);" class="mb-0 mt-3">{{$cv->user->id}}</h4>
                                     <p  style="font-family: 'Source Sans Pro', sans-serif;color: #212121;" class="mb-0 mt-3">
                                         <a href="{{$cv['twitter']}}" target="_blanc">
                                             <svg height="50" width="50" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024" class="icon">

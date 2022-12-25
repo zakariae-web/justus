@@ -73,35 +73,56 @@
                             @if(Auth::user()->id == 1)
                                 <div class="test">
                                     <a href="{{route('cv.edit', ['cv' => $cv->id])}}"><button class="btn me-5 pt-2">edit</button></a>
-                                    <form method="POST" action="{{ route('cv.destroy', $cv->id)}}">
-                                        @csrf
-                                        @method('DELETE')
-                                        <a><button class="noselect" value="delete"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
-                                    </form>
+                                    <a ><button class="noselect deletestd"  data-bs-toggle="modal" data-bs-target="#deleteModal"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
                                 </div>
                             @elseif(Auth::user()->id == $cv['userid'])
                                 <div class="test">
                                     <a href="{{route('cv.edit', ['cv' => $cv->id])}}"><button class="btn me-5 pt-2">edit</button></a>
-                                    <form method="POST" action="{{ route('cv.destroy', $cv->id)}}">
-                                        @csrf
-                                        @method('DELETE')
-                                        <a><button class="noselect" value="delete"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
-                                    </form>
+                                    <a ><button class="noselect deletestd"  data-bs-toggle="modal" data-bs-target="#deleteModal"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
                                 </div>
                             @endif
                         </div>
-                    @endforeach
+                        <div   class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" >
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">delete confrimation</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>are you sure that you want to delete this card?</h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary me-5 pt-2" data-bs-dismiss="modal">Close</button>
+                                        <form method="POST" action="{{ route('cv.destroy', $cv->id)}}">
+                                                @csrf
+                                                @method('DELETE')
+                                            <a><button class="noselect" value="delete"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @if(Auth::user()->id == 1)
+                            <div class="planet mb-5">
+                                <a href="{{('cv/create')}}">
+                                    <h5>add <br> new profile</h5>  
+                                </a>
+                            </div>
+                        @elseif (Auth::user()->id == $cv['userid'])
+                            <div></div>
+                        @else
+                            <div class="planet mb-5">
+                                <a href="{{('cv/create')}}">
+                                    <h5>add your profile</h5>  
+                                </a>
+                            </div>
+                        @endif
+                    @endforeach       
                 </div>
             </div>
-            @if (Auth::user()->id == $cv['userid'])
-            <div></div>
-            @else
-            <div class="planet mb-5">
-                <a href="{{('cv/create')}}">
-                    <h5>add your profile</h5>  
-                </a>
-            </div>
-            @endif
+            
+            
         </div>
     </header>
     <div class="map-clean"></div>
@@ -110,6 +131,16 @@
             <p>Copyright ©&nbsp;zak-web 2022</p>
         </div>
     </footer>
+    <script>
+        $(document).ready(function(){
+            $(document).on('click' , '.deletestd', function(e){
+            e.preventDefault();
+            var id = $(this).val();
+            $("#deleteModal").modal('show');
+    });
+  });
+
+    </script>
     <script src="assets/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/assets/js/bs-init.js"></script>
     <script src="assets/assets/js/grayscale.js"></script>
